@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Age calculator app</title>
+
+
+</head>
+
+<body>
+  <article class="card">
+    <div class="date-input">
+      <form class="flex" action="">
+        <div class="time-input">
+          <label for="day">Day</label>
+          <input type="text" name="day" maxlength="2" id="day" placeholder="DD" pattern="[0-9]{2}" required>
+          <span id="error-day"></span>
+        </div>
+        <div class="time-input">
+          <label for="month">Month</label>
+          <input type="text" name="month" maxlength="2" id="month" placeholder="MM" pattern="[0-9]{2}" required>
+          <span id="error-month"></span>
+        </div>
+        <div class="time-input">
+          <label for="year">Year</label>
+          <input type="text" name="year" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" id="year"
+            placeholder="YYYY" required>
+          <span id="error-year"></span>
+        </div>
+      </form>
+    </div>
+    <div class="separation flex">
+      <button type="button" onclick="buttonClick()"><img src="./assets/images/icon-arrow.svg"
+          alt="icon to convert date spent between then and now"></button> <!--Choose button to have content-->
+    </div>
+    <div class="date-output">
+      <p><span id="years-conversion">--</span> years</p>
+      <p><span id="months-conversion">--</span> months</p>
+      <p><span id="days-conversion">--</span> days</p>
+    </div>
+
+  </article>
+  <script src="script.js"></script>
+</body>
+
+</html>
